@@ -5,7 +5,6 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.QuadCurve?>
 <?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.control.Label?>
 
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
@@ -25,6 +24,5 @@
         <QuadCurve id="idLabioRight" controlX="-41.56349182128906" controlY="37.5434684753418" endX="27.18341827392578" endY="0.060086335986852646" fill="#fad61d" rotate="-8.0" startX="-34.921077728271484" startY="0.7870988845825195" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateX="-19.0" translateY="38.0" />
         <QuadCurve id="idLabioLeft" controlX="41.56349182128906" controlY="37.5434684753418" endX="27.18341827392578" endY="0.060086335986852646" fill="#fad61d" startX="-34.921077728271484" startY="0.7870988845825195" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateX="19.0" translateY="38.0" />
         <Rectangle id="idRectanguloLabio" arcHeight="5.0" arcWidth="5.0" fill="#fad220" height="20.0" stroke="TRANSPARENT" strokeType="INSIDE" translateY="23.0" width="50.0" />
-        <Label text="Este es un Label" translateY = "-100" translateX = "0"/>
     </children>
 </StackPane>
