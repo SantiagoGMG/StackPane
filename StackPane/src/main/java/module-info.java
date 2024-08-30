@@ -1,5 +1,5 @@
 // 'module' es el nombre de la aplicación
-module HolaJavaFX2 {
+module StackPane {
     // Declara que la aplicación necesita los componentes de JavaFX para funcionar
     requires javafx.controls;
     requires javafx.fxml;
