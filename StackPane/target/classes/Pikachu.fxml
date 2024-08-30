@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.Label?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fad61d" height="420.0" stroke="BLACK" strokeType="INSIDE" width="627.0" />
+        <Circle id="IdOjoRight" radius="17.0" stroke="BLACK" strokeType="INSIDE" translateX="80.0" translateY="-50.0" />
+        <Circle id="IdOjoLeft" radius="17.0" stroke="BLACK" strokeType="INSIDE" translateX="-80.0" translateY="-50.0" />
+        <Circle id="IdNariz" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+        <Arc id="idComplementoNariz" fill="#fad61d" length="270.0" radiusX="19.0" radiusY="19.0" startAngle="140.6" stroke="#ffffff00" strokeType="INSIDE" translateY="2.0" type="ROUND" />
+        <Circle id="idMejillaRight" fill="#f62d14" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateX="100.0" translateY="25.0" />
+        <Circle id="idMejillaLeft" fill="#f52c16" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateX="-100.0" translateY="25.0" />
+        <QuadCurve id="idBoca" controlX="-12.0" controlY="150.0" endX="30.0" fill="#811e09" startX="-50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateY="70.0" />
+        <QuadCurve id="idLenguaDown" controlX="-15.0" controlY="70.0" endX="11.0" endY="1.0" fill="#ff043a" startX="-43.0" startY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateX="-1.0" translateY="92.0" />
+        <QuadCurve id="idLenguaUp" controlX="-26.0" controlY="-40.59815216064453" endY="-3.814697265625E-6" fill="#ff043a" startX="-49.0" stroke="TRANSPARENT" strokeType="INSIDE" translateX="-1.0" translateY="66.0" />
+        <Circle id="idPupilaRight" fill="WHITE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateX="73.0" translateY="-53.0" />
+        <Circle id="idPupilaLeft" fill="WHITE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateX="-87.0" translateY="-53.0" />
+        <QuadCurve id="idLabioRight" controlX="-41.56349182128906" controlY="37.5434684753418" endX="27.18341827392578" endY="0.060086335986852646" fill="#fad61d" rotate="-8.0" startX="-34.921077728271484" startY="0.7870988845825195" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateX="-19.0" translateY="38.0" />
+        <QuadCurve id="idLabioLeft" controlX="41.56349182128906" controlY="37.5434684753418" endX="27.18341827392578" endY="0.060086335986852646" fill="#fad61d" startX="-34.921077728271484" startY="0.7870988845825195" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" translateX="19.0" translateY="38.0" />
+        <Rectangle id="idRectanguloLabio" arcHeight="5.0" arcWidth="5.0" fill="#fad220" height="20.0" stroke="TRANSPARENT" strokeType="INSIDE" translateY="23.0" width="50.0" />
+        <Label text="Este es un Label" translateY = "-100" translateX = "0"/>
+    </children>
+</StackPane>
