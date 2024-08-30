@@ -5,13 +5,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ejemplo.GatitoTristeController">
    <children>
-      <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+      <ImageView fx:id="miImagen" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
          <image>
             <Image url="@GatitoTriste.jpg" />
          </image>
       </ImageView>
-      <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" text="click here to hurt the cat!" StackPane.alignment="BOTTOM_CENTER" />
+      <Button fx:id="miBoton" alignment="BOTTOM_CENTER" mnemonicParsing="false" text="click here to hurt the cat!" StackPane.alignment="BOTTOM_CENTER" onAction="#handleButtonClick"/>
    </children>
 </StackPane>
