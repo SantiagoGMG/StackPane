@@ -3,6 +3,7 @@ package ejemplo;
 import java.util.HashSet;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.application.Application;
@@ -21,8 +22,7 @@ public class Ejemplo2 extends Application {
 
         //Crear una imagen y un boton
    
-
-        ImageView imagen = new ImageView(new Image("file:src/main/resources/monster5.png"));
+        ImageView imagen = new ImageView(new Image("https://www.blogdelfotografo.com/wp-content/uploads/2014/08/71.jpg"));
 
         /*
         Image image = new Image("file:src/main/resources/monster5.png");// Cambia a la ruta adecuada
@@ -34,21 +34,22 @@ public class Ejemplo2 extends Application {
         
         ImageView imagen = new ImageView(image);*/
         
-        Button boton = new Button("Cancelar todos los servicios");
-        Button boton2 = new Button("Click me");
+        Button boton1 = new Button("Cancelar todos los servicios");
+        //Button boton2 = new Button("Click me");
+        //CheckBox checkBox = new CheckBox("Aceptar términos y condiciones");
+        
         //Label etiqueta = new Label("Hola a todos");
         //etiqueta.setTextFill(Color.WHITE);
 
         //stackPane.getChildren().addAll(imagen, boton, boton2);
         stackPane.getChildren().add(imagen);
-        stackPane.getChildren().add(boton);
-        stackPane.getChildren().add(boton2);
+        stackPane.getChildren().add(boton1);
+        //stackPane.getChildren().add(boton2);
+        //stackPane.getChildren().add(checkBox);
 
         //Alineacion
-        //StackPane.setAlignment(boton, Pos.CENTER_RIGHT);
-        boton.setMinSize(100, 40);
-        boton.setPrefSize(150, 50);
-        boton.setMaxSize(200, 60);
+        boton1.setMaxSize(200, 60);
+        //StackPane.setAlignment(checkBox, Pos.TOP_CENTER);
 
         // Crear una escena y mostrarla
         Scene scene = new Scene(stackPane);
