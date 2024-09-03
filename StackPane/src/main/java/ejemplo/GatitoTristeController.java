@@ -1,14 +1,12 @@
 package ejemplo;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import java.util.Random;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-
-import java.util.Random;
 
 public class GatitoTristeController {
 
@@ -16,42 +14,43 @@ public class GatitoTristeController {
     private Button miBoton;
 
     @FXML
-    private Pane miPane;  // Pane dentro del StackPane
+    private StackPane miPane;
 
     private Random random = new Random();
 
     @FXML
     private void initialize() {
-        // Agregar un ChangeListener para esperar a que el Pane esté completamente inicializado
-        miPane.widthProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                miBoton.setDisable(false);  // Habilitar el botón cuando el Pane tenga un ancho válido
-            }
-        });
-        
-        miBoton.setDisable(true);  // Deshabilitar el botón hasta que el Pane esté listo
+        // Asegurarse de que el botón esté habilitado desde el inicio
+        if (miBoton != null) {
+            miBoton.setDisable(false);
+        }
     }
 
     @FXML
     private void handleButtonClick() {
+        if (miPane == null) {
+            return;  // Salir si miPane es null
+        }
+
         // Crear un nuevo Text (label) de color rojo
         Text labelRojo = new Text("X");
         labelRojo.setFill(Color.RED);
-
-        // Establecer un tamaño y fuente para el Text (opcional)
         labelRojo.setStyle("-fx-font-size: 24;");
 
-        // Posicionar el label en una posición aleatoria dentro del Pane
-        double maxX = miPane.getWidth() - labelRojo.getBoundsInLocal().getWidth();
-        double maxY = miPane.getHeight() - labelRojo.getBoundsInLocal().getHeight();
-        double randomX = random.nextDouble() * maxX;
-        double randomY = random.nextDouble() * maxY;
+        // Obtener el tamaño del StackPane y del Text
+        double paneWidth = miPane.getWidth();
+        double paneHeight = miPane.getHeight();
+        double textWidth = labelRojo.getLayoutBounds().getWidth();
+        double textHeight = labelRojo.getLayoutBounds().getHeight();
+
+        // Posicionar el label en una posición aleatoria dentro del StackPane
+        double randomX = random.nextDouble() * (paneWidth - textWidth);
+        double randomY = random.nextDouble() * (paneHeight - textHeight);
 
         labelRojo.setLayoutX(randomX);
         labelRojo.setLayoutY(randomY);
 
-        // Agregar el label al Pane
+        // Agregar el label al StackPane
         miPane.getChildren().add(labelRojo);
     }
 }
