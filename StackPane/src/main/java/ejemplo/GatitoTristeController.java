@@ -47,8 +47,8 @@ public class GatitoTristeController {
         double randomX = random.nextDouble() * (paneWidth - textWidth);
         double randomY = random.nextDouble() * (paneHeight - textHeight);
 
-        labelRojo.setLayoutX(randomX);
-        labelRojo.setLayoutY(randomY);
+        labelRojo.setTranslateX(randomX);
+        labelRojo.setTranslateY(randomY);
 
         // Agregar el label al StackPane
         miPane.getChildren().add(labelRojo);
