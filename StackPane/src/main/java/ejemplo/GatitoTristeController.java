@@ -40,17 +40,20 @@ public class GatitoTristeController {
         // Obtener el tamaño del StackPane y del Text
         double paneWidth = miPane.getWidth();
         double paneHeight = miPane.getHeight();
+        
+        
         double textWidth = labelRojo.getLayoutBounds().getWidth();
         double textHeight = labelRojo.getLayoutBounds().getHeight();
 
         // Posicionar el label en una posición aleatoria dentro del StackPane
-        double randomX = random.nextDouble() * (paneWidth - textWidth);
-        double randomY = random.nextDouble() * (paneHeight - textHeight);
+        double randomX = random.nextDouble() * (paneWidth ) -150;
+        double randomY = random.nextDouble() * (paneHeight )- 150;
 
         labelRojo.setTranslateX(randomX);
         labelRojo.setTranslateY(randomY);
 
         // Agregar el label al StackPane
         miPane.getChildren().add(labelRojo);
+        
     }
 }
